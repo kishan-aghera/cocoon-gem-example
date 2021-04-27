@@ -1,2 +1,13 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_with model: @user, url: '/users', method: :post, local: true do |f| %>
+
+  <!--User name-->
+  <%= f.text_area :name %>
+
+  <!--Friend input field-->
+  <%= f.fields_for :friends do |t| %>
+    <%= render "users/friend_fields", f: t %>
+  <% end %>
+
+  <!--Friend addition button-->
+  <%= link_to_add_association "add to", f, :tasks %>
+<% end %>
