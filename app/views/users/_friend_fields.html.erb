@@ -1,6 +1,6 @@
 <div class="nested-fields">
     <%= f.collection_select(:friend_id, {}, :id, :friend_name, {}) %>
-    <%= f.input :friend_name %>
+    <%= f.text_field :friend_name %>
     <div>Friends</div>
     <%= link_to_remove_association "Delete", f %>
 </div>

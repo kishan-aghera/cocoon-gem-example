@@ -1,7 +1,7 @@
 <%= form_with model: @user, url: '/users', method: :post, local: true do |f| %>
 
   <!--User name-->
-  <%= f.text_area :name %>
+  <%= f.text_field :name %>
 
   <!--Friend input field-->
   <%= f.fields_for :friends do |t| %>
@@ -9,5 +9,5 @@
   <% end %>
 
   <!--Friend addition button-->
-  <%= link_to_add_association "add to", f, :tasks %>
+  <%= link_to_add_association "add to", f, :friends %>
 <% end %>
