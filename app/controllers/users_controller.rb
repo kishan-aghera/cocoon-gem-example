@@ -16,6 +16,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, friends_attributes: [:id, :friend_id, :friend_name, :_destroy])
+    params.require(:user).permit(:name, friends_attributes: [:id, :friend_name, :_destroy])
   end
 end
