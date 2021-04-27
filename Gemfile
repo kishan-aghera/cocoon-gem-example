@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Unobtrusive nested forms handling, using jQuery. Use this and discover cocoon-heaven.
+gem 'cocoon'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
