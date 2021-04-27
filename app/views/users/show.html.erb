@@ -1,0 +1,5 @@
+<h4><%= @user.name %>'s Friends</h4>
+
+<% @friends.each do |friend| %>
+  <li><%= friend.friend_name %></li>
+<% end %>
