@@ -1,6 +1,7 @@
 <%= form_with model: @user, url: '/users', method: :post, local: true do |f| %>
 
   <!--User name-->
+  <%= f.label :name %>
   <%= f.text_field :name %>
 
   <!--Friend input field-->
