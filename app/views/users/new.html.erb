@@ -4,11 +4,15 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <!--Friend input field-->
-  <%= f.fields_for :friends do |t| %>
-    <%= render "users/friend_fields", f: t %>
-  <% end %>
+  <!-- Adding friends -->
+  <div id="friends">
+    <%= f.fields_for :friends do |t| %>
+      <%= render "friend_fields", :f => t %>
+    <% end %>
+    <%= link_to_add_association "add friend", f, :friends %>
+  </div>
 
-  <!--Friend addition button-->
-  <%= link_to_add_association "add to", f, :friends %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
