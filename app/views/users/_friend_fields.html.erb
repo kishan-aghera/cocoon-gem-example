@@ -1,7 +1,16 @@
 <div class="nested-fields">
-    <%#= f.collection_select(:id, {}, :user_id, :friend_name, {}) %>
-    <%= f.label "Friend's name" %>
-    <%= f.text_field :friend_name %>
-    
-    <%= link_to_remove_association "Delete", f %>
+  <div class="row">
+    <div class="col-sm-2">
+      <%#= f.label "Friend's name" %>
+      <strong>Friend's Name</strong>
+    </div>
+
+    <div class="col-sm-1">
+      <%= f.text_field :friend_name %>
+    </div>
+
+    <div class="col-sm-1">
+    	<%= link_to_remove_association "Delete", f %>
+    </div>
+  </div>
 </div>
