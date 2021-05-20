@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_for(@user) do |f| %>
   <br>
   <br>
@@ -26,3 +27,37 @@
     </div>
   </div>
 <% end %>
+=======
+<div class="form-main">
+  <div class="policy-form02">
+    <%#= form_for(@user) do |f| %>
+    <%= simple_form_for(@user) do |f| %>
+      <br>
+      <br>
+      <!--User name-->
+      <div class="row d-md-flex">
+        <div class="col-sm-2">
+          <%#= f.label :name %>
+          <strong>Name</strong>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="row">
+          <%= f.simple_fields_for :friends ,:include_id => false do |t| %>
+            <%= render "friend_fields", :f => t %>
+          <% end %>
+          
+          <%= link_to_add_association "Add Friend", f, :friends %>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-3">
+            <%#= f.submit %>
+            <%= f.button :button, type: 'submit' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+>>>>>>> 331242718c438b51cec1b58cd3c6a38b796f5cdf
