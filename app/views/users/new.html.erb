@@ -1,19 +1,28 @@
-<%= form_with model: @user, url: '/users', method: :post, local: true do |f| %>
+<%= form_for(@user) do |f| %>
   <br>
   <br>
   <!--User name-->
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div>
+    <div>
+      <%= f.label :name %>
+      
+      <%= f.text_field :name %>
+    </div>
 
-  <!-- Adding friends -->
-  <div id="friends">
-    <%= f.fields_for :friends do |t| %>
-      <%= render "friend_fields", :f => t %>
-    <% end %>
-    <%= link_to_add_association "add friend", f, :friends %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <div>
+      <%= f.simple_fields_for :friends do |t| %>
+        <%= render "friend_fields", :f => t %>
+      <% end %>
+      
+      <div>
+        <br>
+        <%= link_to_add_association "Add Friend", f, :friends %>
+      </div>
+    </div>
+    
+    <div>
+      <br>
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
