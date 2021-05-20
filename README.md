@@ -1,4 +1,4 @@
-# Friend List App
+# Cocoon Gem Example
 Demonstrates the use of cocoon gem for unobtrusive nested forms handling, using jQuery.
 
 ## Description
