@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Unobtrusive nested forms handling, using jQuery. Use this and discover cocoon-heaven.
 gem 'cocoon'
 
+# Simple form gem is used for experimental purposes only, not used anywhere in the final code.
 #Forms made easy!
 gem 'simple_form', '~> 5.1'
 
