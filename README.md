@@ -32,3 +32,5 @@ To start the server on localhost run the command below. The server will start on
 ```bash
 $ rails s
 ```
+
+#### You can check the blog for the cocoon gem [here](https://www.bacancytechnology.com/blog/cocoon-gem-example-in-rails-6#).
