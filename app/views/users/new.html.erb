@@ -8,7 +8,7 @@
     </div>
 
     <div>
-      <%= f.simple_fields_for :friends do |t| %>
+      <%= f.fields_for :friends do |t| %>
         <%= render "friend_fields", :f => t %>
       <% end %>
       
