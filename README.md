@@ -1,9 +1,9 @@
 # Cocoon Gem Example
-Demonstrates the use of cocoon gem for unobtrusive nested forms handling, using jQuery.
+Demonstrates the use of cocoon gem for unobtrusive nested forms handling.
 
 ## Description
 The project have been implemented to demonstrate how we can use cocoon gem to make nested forms in ruby on rails framework.
-It uses jQuery to make handling unobtrusive.
+The gem uses jQuery to make handling unobtrusive.
 
 ## Install
 To setup project locally, follow below instructions.
